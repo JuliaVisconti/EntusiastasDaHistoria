@@ -182,15 +182,48 @@ body {
     color: #f9e0cc;                             /* cor dos botões no footer */
     font-size: 1.5rem;                            /* tamanho da fonte */
     display: flex;                                /* organiza os botões lado a lado (em linha) */
-    justify-content: space-around;                /* distribui os elementos com um mesmo espaço entre cada um deles */
+    justify-content: space-between;                /* distribui os elementos com um mesmo espaço entre cada um deles */
     align-items: center;                          /* os elementos estão centralizados na página */
-    padding: 4rem;                                /* determina o espaço ao redor dos botões com o footer */
-    margin-top: 3rem;                             /* espaço entre o texto e o elemento de cima */
+    padding: 2rem;                                /* determina o espaço ao redor dos botões com o footer */
+    margin-top: 2rem;                             /* espaço entre o texto e o elemento de cima */
     min-height: 15vh;                             /* gruda o footer com a base da página */
     height: 100%;                                 /* altura da faixa do footer */
 }
 
+
+
 .contato {
+    width: 50%;
     font-weight: bold;                            /* deixa o texto em negrito */
     font-size: 2rem;
+    margin-left: 3rem;
 }
+
+.email {
+    width: 700px;
+    display: flex;
+    margin-left: 2rem;
+    align-items: center;
+}
+
+.telefone {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    margin-left: 10rem;
+}
+
+
+.icone_email {
+    padding: 2%;
+    width: 9%;
+    height: 4%;
+}
+
+
+.icone_whatsapp {
+    padding: 2%;
+    width: 9%;
+    height: 4%;
+}
+
