@@ -1,32 +1,185 @@
 const listaDeQuestoes = [
 
         {
-            pergunta: "Qual mês tem 30 dias?",
-            alternativaA: "Janeiro",
-            alternativaB: "Dezembro",
-            alternativaC: "Junho",
-            alternativaD: "Agosto",
+            pergunta: "O que marca o fim da Pré-História?",
+            alternativaA: "O surgimento da agricultura",
+            alternativaB: "A invenção da roda",
+            alternativaC: "O domínio do fogo",
+            alternativaD: "A invenção da escrita",
+            alternativaCorreta: "alternativaD"
+        },
+
+        {
+            pergunta: "Durante o Paleolítico, os humanos:",
+            alternativaA: "Já viviam em cidades e praticavam agricultura",
+            alternativaB: "Eram sedentários e criavam gado",
+            alternativaC: "Eram nômades e usavam ferramentas de pedra lascada",
+            alternativaD: "Tinham escrita e sistema de leis",
             alternativaCorreta: "alternativaC"
         },
 
         {
-            pergunta: "Quantas horas tem em um dia?",
-            alternativaA: "30 horas",
-            alternativaB: "38 horas",
-            alternativaC: "48 horas",
-            alternativaD: "24 horas",
+            pergunta: "Uma conquista crucial do período Paleolítico foi:",
+            alternativaA: "A cerâmica",
+            alternativaB: "O domínio do fogo",
+            alternativaC: "A tecelagem",
+            alternativaD: "A criação de moedas",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "A principal característica do Neolítico foi:",
+            alternativaA: "Nomadismo",
+            alternativaB: "Uso do ferro",
+            alternativaC: "Sedentarismo e agricultura",
+            alternativaD: "Pinturas rupestres",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "A Idade dos Metais ficou marcada pela(o):",
+            alternativaA: "Invenção da escrita e surgimento das civilizações",
+            alternativaB: "Caça e coleta",
+            alternativaC: "Vida nômade",
+            alternativaD: "Surgimento das pinturas rupestres",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "A Idade Média começou com:",
+            alternativaA: "A Revolução Francesa",
+            alternativaB: "A tomada de Constantinopla",
+            alternativaC: "A queda do Império Romano do Ocidente",
+            alternativaD: "O início das Cruzadas",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "O sistema social e econômico dominante na Idade Média era:",
+            alternativaA: "Capitalismo",
+            alternativaB: "Mercantilismo",
+            alternativaC: "Comunismo",
+            alternativaD: "Feudalismo",
             alternativaCorreta: "alternativaD"
         },
 
         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        }+
+            pergunta: "No sistema feudal, os servos:",
+            alternativaA: "Eram livres e donos de terras",
+            alternativaB: "Recebiam salários do rei",
+            alternativaC: "Trabalhavam em troca de proteção e subsistência",
+            alternativaD: "Viviam nas cidades e eram comerciantes",
+            alternativaCorreta: "alternativaC"
+        },
 
+        {
+            pergunta: "O que caracterizou a Baixa Idade Média?",
+            alternativaA: "Expansão islâmica na Europa",
+            alternativaB: "Declínio do comércio",
+            alternativaC: "Renascimento urbano e crescimento das cidades",
+            alternativaD: "Fim do cristianismo",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "A Peste Negra causou:",
+            alternativaA: "Crescimento da população",
+            alternativaB: "Crise econômica e social",
+            alternativaC: "Expansão da Igreja Católica",
+            alternativaD: "Fim das Cruzadas",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Um dos marcos iniciais da Idade Moderna foi:",
+            alternativaA: "A Revolução Industrial",
+            alternativaB: "A queda do Muro de Berlim",
+            alternativaC: " A Guerra dos Cem Anos",
+            alternativaD: "A tomada de Constantinopla",
+            alternativaCorreta: "alternativaD"
+        },
+
+        {
+            pergunta: "O Renascimento destacou-se por valorizar:",
+            alternativaA: "O humanismo e o conhecimento científico",
+            alternativaB: "A fé cega e o misticismo",
+            alternativaC: "A obediência à Igreja",
+            alternativaD: "O sistema feudal",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "A Reforma Protestante foi iniciada por:",
+            alternativaA: "João Calvino",
+            alternativaB: "Henrique VIII",
+            alternativaC: "Santo Agostinho",
+            alternativaD: "Martinho Lutero",
+            alternativaCorreta: "alternativaD"
+        },
+
+        {
+            pergunta: "O absolutismo é caracterizado pelo:",
+            alternativaA: "Governo parlamentar",
+            alternativaB: "Poder compartilhado entre povo e rei",
+            alternativaC: "Poder concentrado nas mãos do monarca",
+            alternativaD: "Voto direto nas decisões políticas",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "O mercantilismo defendia:",
+            alternativaA: "Livre mercado sem intervenção",
+            alternativaB: "Acúmulo de riquezas pelo Estado e intervenção na economia",
+            alternativaC: "Igualdade de renda",
+            alternativaD: "Eliminação de impostos sobre importações",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "A Revolução Francesa foi motivada por:",
+            alternativaA: "Apoio ao absolutismo",
+            alternativaB: "Interesses coloniais",
+            alternativaC: "Expansão do feudalismo",
+            alternativaD: "Ideais de liberdade, igualdade e fraternidade",
+            alternativaCorreta: "alternativaD"
+        },
+
+        {
+            pergunta: "A Revolução Industrial teve início na:",
+            alternativaA: "Inglaterra",
+            alternativaB: "França",
+            alternativaC: "Alemanha",
+            alternativaD: "Itália",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "A Primeira Guerra Mundial terminou com:",
+            alternativaA: "A Revolução Francesa",
+            alternativaB: "A queda do Império Romano",
+            alternativaC: "O Tratado de Versalhes",
+            alternativaD: "A queda do Muro de Berlim",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "A Guerra Fria foi marcada por:",
+            alternativaA: "Combates diretos entre EUA e URSS",
+            alternativaB: "Paz mundial e cooperação",
+            alternativaC: "Fim das alianças militares",
+            alternativaD: "Disputas ideológicas e corrida armamentista",
+            alternativaCorreta: "alternativaD"
+        },
+
+        {
+            pergunta: "A globalização é caracterizada por:",
+            alternativaA: "Interconexão entre países e mercados",
+            alternativaB: "Isolamento econômico dos países",
+            alternativaC: "Desconexão cultural e tecnológica",
+            alternativaD: "Volta ao feudalismo",
+            alternativaCorreta: "alternativaA"
+        }
+        
     ]
 
     // variáveis globais    
