@@ -1,12 +1,20 @@
 function entrar_na_minha_conta() {
+
     var senha = ipt_senha_login;
+  
     var email = ipt_email_login.value;
-
+  
     if (senha == "" || email == "") {
-        alert("Preencha corretament os campos")
-    }
 
-    fetch("/usuarios/autenticar", {
+        alert("Preencha corretament os campos");
+    
+      } else if (!email.includes('@')) {
+
+        alert("O email precisa ter @");
+
+    } else {
+
+      fetch("/usuarios/autenticar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,4 +37,8 @@ function entrar_na_minha_conta() {
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
       });
+
+    }
+
+    
 }

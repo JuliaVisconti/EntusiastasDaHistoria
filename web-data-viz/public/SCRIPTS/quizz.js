@@ -1,85 +1,88 @@
-const listaDeQuestoes = [
 
-        {
-            pergunta: "O que marca o fim da Pré-História?",
-            alternativaA: "O surgimento da agricultura",
-            alternativaB: "A invenção da roda",
-            alternativaC: "O domínio do fogo",
-            alternativaD: "A invenção da escrita",
-            alternativaCorreta: "alternativaD"
-        },
+// NESTE ARQUIVO, TEMOS TUDO QUE SERIA DA TAG <SCRIPT> DA PÁGINA "QUIZ.HTML", OU SEJA, OS VETORES, FUNCTIONS, VARIÁVEIS, ETC.
 
-        {
-            pergunta: "Durante o Paleolítico, os humanos:",
-            alternativaA: "Já viviam em cidades e praticavam agricultura",
-            alternativaB: "Eram sedentários e criavam gado",
-            alternativaC: "Eram nômades e usavam ferramentas de pedra lascada",
-            alternativaD: "Tinham escrita e sistema de leis",
-            alternativaCorreta: "alternativaC"
-        },
+const listaDeQuestoes = [                                                                  // vetor que guarda cada uma das perguntas do quiz num grande array de jsons
 
-        {
-            pergunta: "Uma conquista crucial do período Paleolítico foi:",
-            alternativaA: "A cerâmica",
-            alternativaB: "O domínio do fogo",
-            alternativaC: "A tecelagem",
-            alternativaD: "A criação de moedas",
-            alternativaCorreta: "alternativaB"
-        },
+    {                                                                                      // questão 1 do quiz
+        pergunta: "O que marca o fim da Pré-História?",                                         // enunciado
+        alternativaA: "O surgimento da agricultura",                                            // alternativa A
+        alternativaB: "A invenção da roda",                                                     // alternativa B
+        alternativaC: "O domínio do fogo",                                                      // alternativa C
+        alternativaD: "A invenção da escrita",                                                  // alternativa D
+        alternativaCorreta: "alternativaD"                                                      // alternativa correta desta questão
+    },
 
-        {
-            pergunta: "A principal característica do Neolítico foi:",
-            alternativaA: "Nomadismo",
-            alternativaB: "Uso do ferro",
-            alternativaC: "Sedentarismo e agricultura",
-            alternativaD: "Pinturas rupestres",
-            alternativaCorreta: "alternativaC"
-        },
+    {                                                                                      // questão 2 do quiz
+        pergunta: "Durante o Paleolítico, os humanos:",                                         // enunciado
+        alternativaA: "Já viviam em cidades e praticavam agricultura",                          // alternativa A
+        alternativaB: "Eram sedentários e criavam gado",                                        // alternativa B
+        alternativaC: "Eram nômades e usavam ferramentas de pedra lascada",                     // alternativa C
+        alternativaD: "Tinham escrita e sistema de leis",                                       // alternativa D
+        alternativaCorreta: "alternativaC"                                                      // alternativa correta desta questão
+    },
 
-        {
-            pergunta: "A Idade dos Metais ficou marcada pela(o):",
-            alternativaA: "Invenção da escrita e surgimento das civilizações",
-            alternativaB: "Caça e coleta",
-            alternativaC: "Vida nômade",
-            alternativaD: "Surgimento das pinturas rupestres",
-            alternativaCorreta: "alternativaA"
-        },
+    {                                                                                     // questão 3 do quiz
+        pergunta: "Uma conquista crucial do período Paleolítico foi:",                          // enunciado
+        alternativaA: "A cerâmica",                                                             // alternativa A
+        alternativaB: "O domínio do fogo",                                                      // alternativa B
+        alternativaC: "A tecelagem",                                                            // alternativa C
+        alternativaD: "A criação de moedas",                                                    // alternativa D
+        alternativaCorreta: "alternativaB"                                                      // alternativa correta desta questão
+    },
 
-        {
-            pergunta: "A Idade Média começou com:",
-            alternativaA: "A Revolução Francesa",
-            alternativaB: "A tomada de Constantinopla",
-            alternativaC: "A queda do Império Romano do Ocidente",
-            alternativaD: "O início das Cruzadas",
-            alternativaCorreta: "alternativaC"
-        },
+    {                                                                                    // questão 4 do quiz
+        pergunta: "A principal característica do Neolítico foi:",                               // enunciado
+        alternativaA: "Nomadismo",                                                              // alternativa A
+        alternativaB: "Uso do ferro",                                                           // alternativa B
+        alternativaC: "Sedentarismo e agricultura",                                             // alternativa C
+        alternativaD: "Pinturas rupestres",                                                     // alternativa D
+        alternativaCorreta: "alternativaC"                                                      // alternativa correta desta questão
+    },
 
-        {
-            pergunta: "O sistema social e econômico dominante na Idade Média era:",
-            alternativaA: "Capitalismo",
-            alternativaB: "Mercantilismo",
-            alternativaC: "Comunismo",
-            alternativaD: "Feudalismo",
-            alternativaCorreta: "alternativaD"
-        },
+    {                                                                                    // questão 5 do quiz
+        pergunta: "A Idade dos Metais ficou marcada pela(o):",                                  // enunciado
+        alternativaA: "Invenção da escrita e surgimento das civilizações",                      // alternativa A
+        alternativaB: "Caça e coleta",                                                          // alternativa B
+        alternativaC: "Vida nômade",                                                            // alternativa C
+        alternativaD: "Surgimento das pinturas rupestres",                                      // alternativa D
+        alternativaCorreta: "alternativaA"                                                      // alternativa correta desta questão
+    },
 
-        {
-            pergunta: "No sistema feudal, os servos:",
-            alternativaA: "Eram livres e donos de terras",
-            alternativaB: "Recebiam salários do rei",
-            alternativaC: "Trabalhavam em troca de proteção e subsistência",
-            alternativaD: "Viviam nas cidades e eram comerciantes",
-            alternativaCorreta: "alternativaC"
-        },
+    {                                                                                    // questão 6 do quiz
+        pergunta: "A Idade Média começou com:",                                                 // enunciado
+        alternativaA: "A Revolução Francesa",                                                   // alternativa A
+        alternativaB: "A tomada de Constantinopla",                                             // alternativa B
+        alternativaC: "A queda do Império Romano do Ocidente",                                  // alternativa C
+        alternativaD: "O início das Cruzadas",                                                  // alternativa D
+        alternativaCorreta: "alternativaC"                                                      // alternativa correta desta questão
+    },
 
-        {
-            pergunta: "O que caracterizou a Baixa Idade Média?",
-            alternativaA: "Expansão islâmica na Europa",
-            alternativaB: "Declínio do comércio",
-            alternativaC: "Renascimento urbano e crescimento das cidades",
-            alternativaD: "Fim do cristianismo",
-            alternativaCorreta: "alternativaC"
-        },
+    {                                                                                    // questão 7 do quiz
+        pergunta: "O sistema social e econômico dominante na Idade Média era:",                 // enunciado
+        alternativaA: "Capitalismo",                                                            // alternativa A
+        alternativaB: "Mercantilismo",                                                          // alternativa B
+        alternativaC: "Comunismo",                                                              // alternativa C
+        alternativaD: "Feudalismo",                                                             // alternativa D
+        alternativaCorreta: "alternativaD"                                                      // alternativa correta desta questão
+    },
+
+    {                                                                                    // questão 8 do quiz
+        pergunta: "No sistema feudal, os servos:",                                              // enunciado
+        alternativaA: "Eram livres e donos de terras",                                          // alternativa A
+        alternativaB: "Recebiam salários do rei",                                               // alternativa B
+        alternativaC: "Trabalhavam em troca de proteção e subsistência",                        // alternativa C
+        alternativaD: "Viviam nas cidades e eram comerciantes",                                 // alternativa D
+        alternativaCorreta: "alternativaC"                                                      // alternativa correta desta questão
+    },
+
+    {                                                                                    // questão 9 do quiz
+        pergunta: "O que caracterizou a Baixa Idade Média?",                                    // enunciado
+        alternativaA: "Expansão islâmica na Europa",                                            // alternativa A
+        alternativaB: "Declínio do comércio",                             
+        alternativaC: "Renascimento urbano e crescimento das cidades",
+        alternativaD: "Fim do cristianismo",
+        alternativaCorreta: "alternativaC"
+    },
 
         {
             pergunta: "A Peste Negra causou:",
@@ -332,29 +335,16 @@ const listaDeQuestoes = [
     }
 
     function finalizarJogo() {
-        let textoParaMensagemFinal = null
-        let classComCoresParaMensagemFinal = null
-        const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoes
 
-        if (porcentagemFinalDeAcertos <= 0.3) {
-            textoParaMensagemFinal = "Parece que você não estudou..."
-            classComCoresParaMensagemFinal = "text-danger-with-bg"
-        }
-        else if (porcentagemFinalDeAcertos > 0.3 && porcentagemFinalDeAcertos < 0.9) {
-            textoParaMensagemFinal = "Pode melhorar na próxima, hein!"
-            classComCoresParaMensagemFinal = "text-warning-with-bg"
-        }
-        else if (porcentagemFinalDeAcertos >= 0.9) {
-            textoParaMensagemFinal = "Uau, parabéns!"
-            classComCoresParaMensagemFinal = "text-success-with-bg"
-        }
+        jogo.innerHTML = `<div class="mensagem_final_quiz">PARABÉNS! <br><br>QUIZ FINALIZADO!</div>`;
 
-        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos)*100) + "% das questões."
+        let textoParaMensagemFinal = null;
 
+// HELP ---------------------------------------------------------------------------------------------------------------------
+ 
+        textoParaMensagemFinal = `Você acertou: ${HELP} questões.<br><br>E errou: ${HELP} questões neste questionário.`
 
         document.getElementById('msgFinal').innerHTML = textoParaMensagemFinal
-        document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal) 
-        document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
 
         document.getElementById('jogo').classList.add("text-new-gray") 
 

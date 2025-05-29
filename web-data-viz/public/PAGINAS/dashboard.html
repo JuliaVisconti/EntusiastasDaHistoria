@@ -1,47 +1,46 @@
-<!DOCTYPE html> <!-- Define que o documento está usando HTML5 -->
+<!DOCTYPE html>
 
-<html lang="pt-br"> <!-- Define o idioma como português do Brasil -->
+<html lang="pt-br">
 
 <head>
 
-    <meta charset="UTF-8" /> <!-- Define o padrão de caracteres para suportar acentuação -->
+    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsividade para mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Dashboard</title> <!-- Título que aparece na aba do navegador -->
+    <title>Dashboard</title>
 
-    <link rel="stylesheet" href="../CSS/dashboard.css" /> <!-- Conecta com o arquivo CSS -->
+    <link rel="stylesheet" href="../CSS/dashboard.css"/>
 
     <link rel="icon" type="image/png" href="../IMAGENS/logoSemFundo.png">
 
 </head>
 
-<body> <!-- Início do conteúdo visível na tela do usuário -->
+<body>
 
 
-    <!-- HEADER ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- HEADER -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-    <div class="header-bar"></div> <!-- Faixa horizontal marrom no topo -->
+    <div class="header-bar"></div>
 
-    <div class="circle"> <!-- Círculo que contém a logo -->
+    <div class="circle">
 
         <img src="../IMAGENS/logoSemFundo.png" title="Criado pelo Entusiastas da História">
-        <!-- Imagem da logo dentro do círculo -->
 
     </div>
 
-    <nav class="menu"> <!-- Menu de navegação -->
+    <nav class="menu">
 
         <ul>
 
-            <li><a href="./PAGINAS/index.html">Home</a></li> <!-- Link para a Home -->
+            <li><a href="../index.html">Home</a></li>
 
-            <li><a href="./PAGINAS/conteudo.html">Conteúdo</a></li> <!-- Link para pAgina de conteúdo -->
+            <li><a href="./conteudo.html">Conteúdo</a></li>
 
-            <li><a href="./PAGINAS/login.html">Login</a></li> <!-- Link para pAgina de login -->
+            <li><a href="./login.html">Login</a></li>
 
-            <li><a href="./PAGINAS/quiz.html">Quiz</a></li> <!-- Link para quizzes -->
+            <li><a href="./quiz.html">Quiz</a></li>
 
             <li><a href="./dashboard.html"><u>Dashboard</u></a></li>
 
@@ -50,12 +49,15 @@
     </nav>
 
 
-    <!-- TEXTO PRINCIPAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- TEXTO PRINCIPAL ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-    <main class="content"> <!-- Área principal do conteúdo -->
+<!-- PRIMEIRO GRÁFICO ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-        <div class="caixa1"> <!-- Caixa com fundo bege para destacar o conteúdo -->
+
+    <main class="content">
+
+        <div class="caixa1">
 
             <h2>Gráfico de acertos e erros dos usuários em cada questão:</h2><br>
 
@@ -64,14 +66,19 @@
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
             <script>
+
                 const ctx1 = document.getElementById('myChart1');
 
                 new Chart(ctx1, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Questão 1', 'Questão 2', 'Questão 3', 'Questão 4', 'Questão 5', 'Questão 6', 'Questão 7', 'Questão 8', 'Questão 9', 'Questão 10', 'Questão 11', 
+
+                    type: 'bar', data: {
+                    
+                        labels: ['Questão 1', 'Questão 2', 'Questão 3', 'Questão 4', 'Questão 5', 'Questão 6', 'Questão 7', 'Questão 8', 'Questão 9', 'Questão 10', 'Questão 11',
+                    
                                  'Questão 12', 'Questão 13', 'Questão 14', 'Questão 15', 'Questão 16', 'Questão 17', 'Questão 18', 'Questão 19', 'Questão 20'],
+                        
                         datasets: [
+                        
                             {
                                 label: 'Acertos',
                                 data: [12, 19, 3, 5, 2, 3, 6, 8, 10, 15, 9, 4, 11, 7, 6, 3, 2, 8, 5, 10],
@@ -79,6 +86,7 @@
                                 borderColor: 'black',
                                 borderWidth: 1
                             },
+                            
                             {
                                 label: 'Erros',
                                 data: [5, 3, 8, 2, 4, 6, 3, 4, 2, 1, 6, 8, 3, 5, 7, 6, 9, 3, 6, 2],
@@ -86,24 +94,40 @@
                                 borderColor: 'black',
                                 borderWidth: 1
                             }
+
                         ]
+
                     },
+
                     options: {
+                    
                         responsive: true,
+                    
                         scales: {
+                    
                             y: {
+                    
                                 beginAtZero: true
+                    
                             }
+                    
                         }
+                    
                     }
+                
                 });
+
             </script>
 
         </div>
 
 
+<!-- SEGUNDO GRÁFICO ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
         <div id="caixaLateral">
-            <div class="caixa2"> <!-- Caixa com fundo bege para destacar o conteúdo -->
+
+            <div class="caixa2">
 
                 <h2>Ranking de períodos favoritos:</h2>
 
@@ -112,13 +136,17 @@
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
                 <script>
+
                     const ctx2 = document.getElementById('myChart2');
 
                     new Chart(ctx2, {
-                        type: 'bar',
-                        data: {
+
+                        type: 'bar', data: {
+
                             labels: ['Pré-História', 'Idade Média', 'Idade Moderna', 'Idade Contemporânea'],
+                            
                             datasets: [
+
                                 {
                                     label: 'Votos dos Usuários',
                                     data: [12, 19, 3, 5, 2, 3, 6, 8, 10, 15, 9, 4, 11, 7, 6, 3, 2, 8, 5, 10],
@@ -126,50 +154,91 @@
                                     borderColor: 'black',
                                     borderWidth: 1
                                 }
+
                             ]
+
                         },
+
                         options: {
+
                             responsive: true,
+
                             scales: {
+
                                 y: {
+
                                     beginAtZero: true
+
                                 }
+
                             }
+
                         }
+
                     });
+
+
                 </script>
 
             </div>
 
+
+<!-- ÁREA DAS KPI'S ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+        <div class="caixa3">
+
             <div id="kpis">
+
                 <div class="kpi">
-                    <span>KPI1</span>
-                    <span id="kpi1">KPI1</span>
+
+                    <span class="titulo-kpi">Taxa de usuários do site</span>
+
+                    <span class="valor-kpi" id="kpi1">...</span>
+
                 </div>
+
                 <div class="kpi">
-                    <span>KPI2</span>
-                    <span id="kpi2">KPI2</span>
+
+                    <span class="titulo-kpi">Taxa de tentativas do questionário</span>
+
+                    <span class="valor-kpi" id="kpi2">...</span>
+
                 </div>
+
                 <div class="kpi">
-                    <span>KPI3</span>
-                    <span id="kpi3">KPI3</span>
+
+                    <span class="titulo-kpi">Taxa de usuários ativos na última semana</span>
+
+                    <span class="valor-kpi" id="kpi3">...</span>
+
                 </div>
+
+                <div class="kpi">
+
+                    <span class="titulo-kpi">Taxa de conclusão de quiz</span>
+
+                    <span class="valor-kpi" id="kpi4">...%</span>
+
+                </div>
+
             </div>
-                
+
         </div>
+
     </main>
 
 
-    <!-- FOOTER ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- FOOTER ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-    <footer class="footer"> <!-- Rodapé com informações de contato -->
+    <footer class="footer">
 
-        <div class="contato">Deseja nos contatar?</div> <!-- Introdução da área de contato -->
+        <div class="contato">Deseja nos contatar?</div>
 
-        <div class="email"><img class="icone_email" src="../IMAGENS/icone_email.png" title="Logo do Email">Email: entusiastasdahistoria@gmail.com</div> <!-- Email de contato -->
+        <div class="email"><img class="icone_email" src="../IMAGENS/icone_email.png" title="Logo do Email">Email: entusiastasdahistoria@gmail.com</div>
 
-        <div class="telefone"><img class="icone_whatsapp" src="../IMAGENS/icone_whatsapp.png" title="Logo do Whatsapp">Telefone: +55 11 96630-2506</div> <!-- Telefone de contato -->
+        <div class="telefone"><img class="icone_whatsapp" src="../IMAGENS/icone_whatsapp.png" title="Logo do Whatsapp">Telefone: +55 11 96630-2506</div>
 
     </footer>
 

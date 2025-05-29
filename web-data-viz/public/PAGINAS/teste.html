@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="julia1">
+        <h2>JULIA</h2>
+    </div>
+
+    <div id="caio1" style="display: none;"> 
+        <h2>PARABENS</h2>
+    </div>
+
+    <button onclick="julia()">APARECER CAIO</button>
+    <button onclick="caio()">APARECER JULIA</button>
+</body>
+</html>
+<script>
+
+    function julia() {
+        caio1.style.display = "block"
+        julia1.style.display = "none"
+    }
+
+    function caio() {
+        caio1.style.display = "none"
+        julia1.style.display = "block"
+    }
+    
+</script>

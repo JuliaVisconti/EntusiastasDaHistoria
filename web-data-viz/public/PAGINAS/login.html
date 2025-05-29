@@ -1,6 +1,3 @@
-
-<!-- ESSE É O CÓDIGO HTML DO LOGIN -->
-
 <!DOCTYPE html>                                                                                 <!-- Define que o documento está usando HTML5 -->
 
 <html lang="pt-br">                                                                             <!-- Define o idioma como português do Brasil -->
@@ -18,6 +15,7 @@
     <link rel="icon" type="image/png" href="../IMAGENS/logoSemFundo.png">
 
     <script src="../SCRIPTS/autenticar.js"></script>
+
 </head>
 
 <body>                                                                                          <!-- Início do conteúdo visível na tela do usuário -->
@@ -60,9 +58,9 @@
 
             <p1>Acesse sua conta preenchendo os campos abaixo e clicando no botão!</p1><br><br>                                                                                             <!-- Título principal -->
 
-            <p2><b>Email:  <input type="text" id="ipt_email_login"></b></p2><br><br>
+            <p2><b>Email:  <input type="text" id="ipt_email_login" autocomplete="off"></b></p2><br><br>
 
-            <p2><b>Senha:  <input type="password" id="ipt_senha_login"></b></p2><br><br>
+            <p2><b>Senha:  <input type="password" id="ipt_senha_login" autocomplete="off"></b></p2><br><br>
 
             <button onclick="entrar_na_minha_conta()">Entrar na minha conta</button>
 
