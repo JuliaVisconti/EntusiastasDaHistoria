@@ -278,11 +278,6 @@ const listaDeQuestoes = [                                                       
         limparCoresBackgroundOpcoes()
     }
 
-    function tentarNovamente() {
-        // atualiza a página
-        window.location.reload()
-    }
-
     function checarResposta() {
         const questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual] // questão atual 
         const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
@@ -299,8 +294,10 @@ const listaDeQuestoes = [                                                       
         })
 
         // verifica se resposta assinalada é correta
+        let acertou;
         options.forEach((option) => {
             if (option.checked === true && option.value === respostaQuestaoAtual) {
+                acertou = 1
                 document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
                 pontuacaoFinal++
                 certas++
@@ -308,7 +305,7 @@ const listaDeQuestoes = [                                                       
                 numeroDaQuestaoAtual++
             } else if (option.checked && option.value !== respostaQuestaoAtual) {
                 const wrongLabelId = option.labels[0].id
-
+                acertou = 0
                 document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
                 document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
                 tentativaIncorreta++
@@ -316,6 +313,22 @@ const listaDeQuestoes = [                                                       
                 document.getElementById("spanErradas").innerHTML = erradas
                 numeroDaQuestaoAtual++
             }
+        })
+
+        let idUsuario = sessionStorage.ID_USUARIO;
+
+        fetch("/dashboard/submeterResposta", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idQuestaoServer: numeroDaQuestaoAtual,
+                pontuacaoServer: acertou,
+                idUsuarioServer: idUsuario
+            })
+        }).then(resultado => {
+            console.log(resultado);
         })
     }
 

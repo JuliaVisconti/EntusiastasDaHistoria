@@ -6,6 +6,7 @@ function cadastrar(req, res) {
     var telefone = req.body.telefoneServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var periodo = req.body.periodoServer;
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
@@ -19,7 +20,7 @@ function cadastrar(req, res) {
         res.status(400).send("Seu telefone está undefined");
     } else {
 
-        usuarioModel.cadastrar(nome, apelido, telefone, email, senha)
+        usuarioModel.cadastrar(nome, apelido, telefone, email, senha, periodo)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -39,15 +40,18 @@ function cadastrar(req, res) {
 
 function autenticar(req, res) {
     var email = req.body.emailServer;
+    var senha = req.body.senhaServer;
 
     if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else {
 
-        usuarioModel.autenticar(email)
+        usuarioModel.autenticar(email, senha)
             .then(
                 function (resultado) {
-                    res.json(resultado);
+                    res.json({
+                        lista: resultado[0]
+                    });
                 }
             ).catch(
                 function (erro) {

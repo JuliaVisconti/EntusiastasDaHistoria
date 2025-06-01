@@ -1,5 +1,3 @@
-
-
 # SEJA BEM VINDO(A) AO PROJETO "ENTUSIASTAS DA HISTÓRIA"
 
 
@@ -8,7 +6,6 @@ Resumo: Neste arquivo está o passo para entender todo o back e front ends utili
 ORGANIZAÇÃO:
 
 1. PASTAS: As pastas que você vê á esquerda deste arquivo foram criadas puramente pela organização do site (elas funcionam se estiverem soltas, mas assim fica mais bonito e eficiente).
-
 
     "CSS" guarda os arquivos criados apenas para a estilização das páginas do site.
 

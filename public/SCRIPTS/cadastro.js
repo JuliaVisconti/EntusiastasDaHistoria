@@ -12,6 +12,8 @@ function criar_minha_conta() {
   
     var confirmaSenha = ipt_confirmacao_senha_cadastro.value;
 
+    var periodo = select_periodo.value;
+
 
     if (nome == "" || email == "" || apelido == "" || confirmaSenha == "" || senha == "" || telefone == "") {
 
@@ -55,7 +57,9 @@ function criar_minha_conta() {
   
         emailServer: email,
   
-        senhaServer: senha
+        senhaServer: senha,
+
+        periodoServer: periodo
   
       }),
   

@@ -1,6 +1,6 @@
 function entrar_na_minha_conta() {
 
-    var senha = ipt_senha_login;
+    var senha = ipt_senha_login.value;
   
     var email = ipt_email_login.value;
   
@@ -24,12 +24,25 @@ function entrar_na_minha_conta() {
         senhaServer: senha
     }),
     })
-      .then(function (resposta) {
+      .then((resposta) => {
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-          alert("Login realizado com sucesso! Redirecionando para tela de Quiz...");
-          window.location = "./quiz.html";
+        resposta.json()
+        .then(json => {
+          console.log("json")
+          console.log(json.lista)
+          sessionStorage.ID_USUARIO = json.lista.id
+          sessionStorage.EMAIL_USUARIO = json.lista.email
+          if(json.lista.id == 1) {
+              alert("Login realizado com sucesso! Redirecionando para Dashboard...");
+              window.location = "./dashboard.html"
+            } else {
+              alert("Login realizado com sucesso! Redirecionando para tela de Quiz...");
+              window.location = "./quiz.html";
+            }
+        })
+
         } else {
           throw "Você não possui uma conta ainda";
         }

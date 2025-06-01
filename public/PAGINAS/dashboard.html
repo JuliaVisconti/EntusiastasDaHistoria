@@ -14,9 +14,11 @@
 
     <link rel="icon" type="image/png" href="../IMAGENS/logoSemFundo.png">
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </head>
 
-<body>
+<body onload="carregarDados()">
 
 
 <!-- HEADER -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -62,63 +64,6 @@
             <h2>Gráfico de acertos e erros dos usuários em cada questão:</h2><br>
 
             <div style="width: 50vw;"> <canvas id="myChart1"></canvas> </div>
-
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-            <script>
-
-                const ctx1 = document.getElementById('myChart1');
-
-                new Chart(ctx1, {
-
-                    type: 'bar', data: {
-                    
-                        labels: ['Questão 1', 'Questão 2', 'Questão 3', 'Questão 4', 'Questão 5', 'Questão 6', 'Questão 7', 'Questão 8', 'Questão 9', 'Questão 10', 'Questão 11',
-                    
-                                 'Questão 12', 'Questão 13', 'Questão 14', 'Questão 15', 'Questão 16', 'Questão 17', 'Questão 18', 'Questão 19', 'Questão 20'],
-                        
-                        datasets: [
-                        
-                            {
-                                label: 'Acertos',
-                                data: [12, 19, 3, 5, 2, 3, 6, 8, 10, 15, 9, 4, 11, 7, 6, 3, 2, 8, 5, 10],
-                                backgroundColor: 'green',
-                                borderColor: 'black',
-                                borderWidth: 1
-                            },
-                            
-                            {
-                                label: 'Erros',
-                                data: [5, 3, 8, 2, 4, 6, 3, 4, 2, 1, 6, 8, 3, 5, 7, 6, 9, 3, 6, 2],
-                                backgroundColor: 'red',
-                                borderColor: 'black',
-                                borderWidth: 1
-                            }
-
-                        ]
-
-                    },
-
-                    options: {
-                    
-                        responsive: true,
-                    
-                        scales: {
-                    
-                            y: {
-                    
-                                beginAtZero: true
-                    
-                            }
-                    
-                        }
-                    
-                    }
-                
-                });
-
-            </script>
-
         </div>
 
 
@@ -133,53 +78,6 @@
 
                 <div style="width: 25vw; height: 30vh;"> <canvas id="myChart2"></canvas> </div>
 
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-                <script>
-
-                    const ctx2 = document.getElementById('myChart2');
-
-                    new Chart(ctx2, {
-
-                        type: 'bar', data: {
-
-                            labels: ['Pré-História', 'Idade Média', 'Idade Moderna', 'Idade Contemporânea'],
-                            
-                            datasets: [
-
-                                {
-                                    label: 'Votos dos Usuários',
-                                    data: [12, 19, 3, 5, 2, 3, 6, 8, 10, 15, 9, 4, 11, 7, 6, 3, 2, 8, 5, 10],
-                                    backgroundColor: 'brown',
-                                    borderColor: 'black',
-                                    borderWidth: 1
-                                }
-
-                            ]
-
-                        },
-
-                        options: {
-
-                            responsive: true,
-
-                            scales: {
-
-                                y: {
-
-                                    beginAtZero: true
-
-                                }
-
-                            }
-
-                        }
-
-                    });
-
-
-                </script>
-
             </div>
 
 
@@ -192,7 +90,7 @@
 
                 <div class="kpi">
 
-                    <span class="titulo-kpi">Taxa de usuários do site</span>
+                    <span class="titulo-kpi">Total de usuários do site</span>
 
                     <span class="valor-kpi" id="kpi1">...</span>
 
@@ -200,7 +98,7 @@
 
                 <div class="kpi">
 
-                    <span class="titulo-kpi">Taxa de tentativas do questionário</span>
+                    <span class="titulo-kpi">Taxa de acertos</span>
 
                     <span class="valor-kpi" id="kpi2">...</span>
 
@@ -208,7 +106,7 @@
 
                 <div class="kpi">
 
-                    <span class="titulo-kpi">Taxa de usuários ativos na última semana</span>
+                    <span class="titulo-kpi">Taxa de erros</span>
 
                     <span class="valor-kpi" id="kpi3">...</span>
 
@@ -216,7 +114,7 @@
 
                 <div class="kpi">
 
-                    <span class="titulo-kpi">Taxa de conclusão de quiz</span>
+                    <span class="titulo-kpi">Total de respostas do ranking</span>
 
                     <span class="valor-kpi" id="kpi4">...%</span>
 
@@ -245,3 +143,5 @@
 </body>
 
 </html>
+
+<script src="..\SCRIPTS\dashboard.js"></script>
