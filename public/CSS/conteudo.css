@@ -126,11 +126,15 @@ body {
 }
 
 .caixa img {
-    width: 55%;              /* Aumenta a largura da imagem para 100% do container */
+    width: 50%;              /* Aumenta a largura da imagem para 100% do container */
     height: fit-content;            /* Mantém a proporção da imagem */
     border-radius: 2%;       /* Bordas levemente arredondadas */
-    margin-left: 4%;
+    margin-left: 1%;
     border: #551c00;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 

@@ -5,9 +5,9 @@
 
 
 * {
-    margin: 0; /* Remove margens padrões */
-    padding: 0; /* Remove espaçamentos internos padrões */
-    box-sizing: border-box; /* Inclui bordas no cálculo de largura/altura */
+    margin: 0;                                                                                /* Remove margens padrões */
+    padding: 0;                                                                               /* Remove espaçamentos internos padrões */
+    box-sizing: border-box;                                                                   /* Inclui bordas no cálculo de largura/altura */
 }
 
 
