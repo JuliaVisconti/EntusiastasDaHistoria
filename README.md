@@ -100,9 +100,9 @@ As pastas que você vê á esquerda deste arquivo foram criadas para a organiza�
 
 3. Escreve "npm i" para instalar todas as dependências que o node usa;
 
-4. Escreve "npm start" para a API rodar
+4. Escreve "npm start" para a API rodar;
 
-5. Vai pro site testar
+5. Vai pro site testar.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
