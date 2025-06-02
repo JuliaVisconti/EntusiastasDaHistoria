@@ -19,7 +19,7 @@ create table Usuario (
 	email varchar(60) unique,
 	senha varchar(80),
     periodo varchar(45)
-	);
+);
         
 create table Questao (
 	id int primary key auto_increment,
@@ -57,10 +57,13 @@ insert into questao (descricao, resposta) values ("O que marca o fim da Pré-His
                                                  ("A Guerra Fria foi marcada por:", "D"),
                                                  ("A globalização é caracterizada por:", "A");
 
-select * from questao;
+insert into usuario values (default, 'Julia', 'juju', '11987654321', 'juvisconti@sptech.school', 'Urubu#100', null);
 
-insert into usuario values (default, 'Julia', 'juju', '11987654321', 'juvisconti@sptech.school', 'Urubu#100', null)
+select * from Usuario;
 
+select * from Questao;
+
+select * from Resposta;
 
 create view graficoRespostas as (select
 	sum(case when pontuacao = 1 and fkQuestao = 1 then 1 else 0 end) as acertoQ1, sum(case when pontuacao = 0 and fkQuestao = 1 then 1 else 0 end) as erroQ1, 
