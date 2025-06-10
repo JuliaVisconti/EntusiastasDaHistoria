@@ -27,4 +27,8 @@ router.get("/graficoRespostas", function (req, res) {
     dashboardController.graficoRespostas(req, res)
 })
 
+router.get("/kpiQtdTentativas", function (req, res) {
+    dashboardController.kpiQtdTentativas(req, res)  
+})
+
 module.exports = router;

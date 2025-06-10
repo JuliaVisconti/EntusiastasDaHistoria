@@ -1,203 +1,202 @@
+const listaDeQuestoes = [
 
-// NESTE ARQUIVO, TEMOS TUDO QUE SERIA DA TAG <SCRIPT> DA PÁGINA "QUIZ.HTML", OU SEJA, OS VETORES, FUNCTIONS, VARIÁVEIS, ETC.
-
-const listaDeQuestoes = [                                                                  // vetor que guarda cada uma das perguntas do quiz num grande array de jsons
-
-    {                                                                                      // questão 1 do quiz
-        pergunta: "O que marca o fim da Pré-História?",                                         // enunciado
-        alternativaA: "O surgimento da agricultura",                                            // alternativa A
-        alternativaB: "A invenção da roda",                                                     // alternativa B
-        alternativaC: "O domínio do fogo",                                                      // alternativa C
-        alternativaD: "A invenção da escrita",                                                  // alternativa D
-        alternativaCorreta: "alternativaD"                                                      // alternativa correta desta questão
+    {
+        pergunta: "O que marca o fim da Pré-História?",
+        alternativaA: "O surgimento da agricultura",
+        alternativaB: "A invenção da roda",
+        alternativaC: "O domínio do fogo",
+        alternativaD: "A invenção da escrita",
+        alternativaCorreta: "alternativaD"
     },
 
-    {                                                                                      // questão 2 do quiz
-        pergunta: "Durante o Paleolítico, os humanos:",                                         // enunciado
-        alternativaA: "Já viviam em cidades e praticavam agricultura",                          // alternativa A
-        alternativaB: "Eram sedentários e criavam gado",                                        // alternativa B
-        alternativaC: "Eram nômades e usavam ferramentas de pedra lascada",                     // alternativa C
-        alternativaD: "Tinham escrita e sistema de leis",                                       // alternativa D
-        alternativaCorreta: "alternativaC"                                                      // alternativa correta desta questão
+    {
+        pergunta: "Durante o Paleolítico, os humanos:",
+        alternativaA: "Já viviam em cidades e praticavam agricultura",
+        alternativaB: "Eram sedentários e criavam gado",
+        alternativaC: "Eram nômades e usavam ferramentas de pedra lascada",
+        alternativaD: "Tinham escrita e sistema de leis",
+        alternativaCorreta: "alternativaC"
     },
 
-    {                                                                                     // questão 3 do quiz
-        pergunta: "Uma conquista crucial do período Paleolítico foi:",                          // enunciado
-        alternativaA: "A cerâmica",                                                             // alternativa A
-        alternativaB: "O domínio do fogo",                                                      // alternativa B
-        alternativaC: "A tecelagem",                                                            // alternativa C
-        alternativaD: "A criação de moedas",                                                    // alternativa D
-        alternativaCorreta: "alternativaB"                                                      // alternativa correta desta questão
+    {
+        pergunta: "Uma conquista crucial do período Paleolítico foi:",
+        alternativaA: "A cerâmica",
+        alternativaB: "O domínio do fogo",
+        alternativaC: "A tecelagem",
+        alternativaD: "A criação de moedas",
+        alternativaCorreta: "alternativaB"
     },
 
-    {                                                                                    // questão 4 do quiz
-        pergunta: "A principal característica do Neolítico foi:",                               // enunciado
-        alternativaA: "Nomadismo",                                                              // alternativa A
-        alternativaB: "Uso do ferro",                                                           // alternativa B
-        alternativaC: "Sedentarismo e agricultura",                                             // alternativa C
-        alternativaD: "Pinturas rupestres",                                                     // alternativa D
-        alternativaCorreta: "alternativaC"                                                      // alternativa correta desta questão
+    {    
+        pergunta: "A principal característica do Neolítico foi:",
+        alternativaA: "Nomadismo",
+        alternativaB: "Uso do ferro",
+        alternativaC: "Sedentarismo e agricultura",
+        alternativaD: "Pinturas rupestres",
+        alternativaCorreta: "alternativaC"
     },
 
-    {                                                                                    // questão 5 do quiz
-        pergunta: "A Idade dos Metais ficou marcada pela(o):",                                  // enunciado
-        alternativaA: "Invenção da escrita e surgimento das civilizações",                      // alternativa A
-        alternativaB: "Caça e coleta",                                                          // alternativa B
-        alternativaC: "Vida nômade",                                                            // alternativa C
-        alternativaD: "Surgimento das pinturas rupestres",                                      // alternativa D
-        alternativaCorreta: "alternativaA"                                                      // alternativa correta desta questão
+    {
+        pergunta: "A Idade dos Metais ficou marcada pela(o):",
+        alternativaA: "Invenção da escrita e surgimento das civilizações",
+        alternativaB: "Caça e coleta",
+        alternativaC: "Vida nômade",
+        alternativaD: "Surgimento das pinturas rupestres",
+        alternativaCorreta: "alternativaA"
     },
 
-    {                                                                                    // questão 6 do quiz
-        pergunta: "A Idade Média começou com:",                                                 // enunciado
-        alternativaA: "A Revolução Francesa",                                                   // alternativa A
-        alternativaB: "A tomada de Constantinopla",                                             // alternativa B
-        alternativaC: "A queda do Império Romano do Ocidente",                                  // alternativa C
-        alternativaD: "O início das Cruzadas",                                                  // alternativa D
-        alternativaCorreta: "alternativaC"                                                      // alternativa correta desta questão
+    {
+        pergunta: "A Idade Média começou com:",
+        alternativaA: "A Revolução Francesa",
+        alternativaB: "A tomada de Constantinopla",
+        alternativaC: "A queda do Império Romano do Ocidente",
+        alternativaD: "O início das Cruzadas",
+        alternativaCorreta: "alternativaC"
     },
 
-    {                                                                                    // questão 7 do quiz
-        pergunta: "O sistema social e econômico dominante na Idade Média era:",                 // enunciado
-        alternativaA: "Capitalismo",                                                            // alternativa A
-        alternativaB: "Mercantilismo",                                                          // alternativa B
-        alternativaC: "Comunismo",                                                              // alternativa C
-        alternativaD: "Feudalismo",                                                             // alternativa D
-        alternativaCorreta: "alternativaD"                                                      // alternativa correta desta questão
+    {
+        pergunta: "O sistema social e econômico dominante na Idade Média era:",
+        alternativaA: "Capitalismo",
+        alternativaB: "Mercantilismo",
+        alternativaC: "Comunismo",
+        alternativaD: "Feudalismo",
+        alternativaCorreta: "alternativaD"
     },
 
-    {                                                                                    // questão 8 do quiz
-        pergunta: "No sistema feudal, os servos:",                                              // enunciado
-        alternativaA: "Eram livres e donos de terras",                                          // alternativa A
-        alternativaB: "Recebiam salários do rei",                                               // alternativa B
-        alternativaC: "Trabalhavam em troca de proteção e subsistência",                        // alternativa C
-        alternativaD: "Viviam nas cidades e eram comerciantes",                                 // alternativa D
-        alternativaCorreta: "alternativaC"                                                      // alternativa correta desta questão
+    {
+        pergunta: "No sistema feudal, os servos:",
+        alternativaA: "Eram livres e donos de terras",
+        alternativaB: "Recebiam salários do rei",
+        alternativaC: "Trabalhavam em troca de proteção e subsistência",
+        alternativaD: "Viviam nas cidades e eram comerciantes",
+        alternativaCorreta: "alternativaC"
     },
 
-    {                                                                                    // questão 9 do quiz
-        pergunta: "O que caracterizou a Baixa Idade Média?",                                    // enunciado
-        alternativaA: "Expansão islâmica na Europa",                                            // alternativa A
+    {
+        pergunta: "O que caracterizou a Baixa Idade Média?",
+        alternativaA: "Expansão islâmica na Europa",
         alternativaB: "Declínio do comércio",                             
         alternativaC: "Renascimento urbano e crescimento das cidades",
         alternativaD: "Fim do cristianismo",
         alternativaCorreta: "alternativaC"
     },
 
-        {
-            pergunta: "A Peste Negra causou:",
-            alternativaA: "Crescimento da população",
-            alternativaB: "Crise econômica e social",
-            alternativaC: "Expansão da Igreja Católica",
-            alternativaD: "Fim das Cruzadas",
-            alternativaCorreta: "alternativaB"
-        },
+    {
+        pergunta: "A Peste Negra causou:",
+        alternativaA: "Crescimento da população",
+        alternativaB: "Crise econômica e social",
+        alternativaC: "Expansão da Igreja Católica",
+        alternativaD: "Fim das Cruzadas",
+        alternativaCorreta: "alternativaB"
+    },
 
-        {
-            pergunta: "Um dos marcos iniciais da Idade Moderna foi:",
-            alternativaA: "A Revolução Industrial",
-            alternativaB: "A queda do Muro de Berlim",
-            alternativaC: " A Guerra dos Cem Anos",
-            alternativaD: "A tomada de Constantinopla",
-            alternativaCorreta: "alternativaD"
-        },
+    {
+        pergunta: "Um dos marcos iniciais da Idade Moderna foi:",
+        alternativaA: "A Revolução Industrial",
+        alternativaB: "A queda do Muro de Berlim",
+        alternativaC: " A Guerra dos Cem Anos",
+        alternativaD: "A tomada de Constantinopla",
+        alternativaCorreta: "alternativaD"
+    },
 
-        {
-            pergunta: "O Renascimento destacou-se por valorizar:",
-            alternativaA: "O humanismo e o conhecimento científico",
-            alternativaB: "A fé cega e o misticismo",
-            alternativaC: "A obediência à Igreja",
-            alternativaD: "O sistema feudal",
-            alternativaCorreta: "alternativaA"
-        },
+    {
+        pergunta: "O Renascimento destacou-se por valorizar:",
+        alternativaA: "O humanismo e o conhecimento científico",
+        alternativaB: "A fé cega e o misticismo",
+        alternativaC: "A obediência à Igreja",
+        alternativaD: "O sistema feudal",
+        alternativaCorreta: "alternativaA"
+    },
 
-        {
-            pergunta: "A Reforma Protestante foi iniciada por:",
-            alternativaA: "João Calvino",
-            alternativaB: "Henrique VIII",
-            alternativaC: "Santo Agostinho",
-            alternativaD: "Martinho Lutero",
-            alternativaCorreta: "alternativaD"
-        },
+    {
+        pergunta: "A Reforma Protestante foi iniciada por:",
+        alternativaA: "João Calvino",
+        alternativaB: "Henrique VIII",
+        alternativaC: "Santo Agostinho",
+        alternativaD: "Martinho Lutero",
+        alternativaCorreta: "alternativaD"
+    },
 
-        {
-            pergunta: "O absolutismo é caracterizado pelo:",
-            alternativaA: "Governo parlamentar",
-            alternativaB: "Poder compartilhado entre povo e rei",
-            alternativaC: "Poder concentrado nas mãos do monarca",
-            alternativaD: "Voto direto nas decisões políticas",
-            alternativaCorreta: "alternativaC"
-        },
+    {
+        pergunta: "O absolutismo é caracterizado pelo:",
+        alternativaA: "Governo parlamentar",
+        alternativaB: "Poder compartilhado entre povo e rei",
+        alternativaC: "Poder concentrado nas mãos do monarca",
+        alternativaD: "Voto direto nas decisões políticas",
+        alternativaCorreta: "alternativaC"
+    },
 
-        {
-            pergunta: "O mercantilismo defendia:",
-            alternativaA: "Livre mercado sem intervenção",
-            alternativaB: "Acúmulo de riquezas pelo Estado e intervenção na economia",
-            alternativaC: "Igualdade de renda",
-            alternativaD: "Eliminação de impostos sobre importações",
-            alternativaCorreta: "alternativaB"
-        },
+    {
+        pergunta: "O mercantilismo defendia:",
+        alternativaA: "Livre mercado sem intervenção",
+        alternativaB: "Acúmulo de riquezas pelo Estado e intervenção na economia",
+        alternativaC: "Igualdade de renda",
+        alternativaD: "Eliminação de impostos sobre importações",
+        alternativaCorreta: "alternativaB"
+    },
 
-        {
-            pergunta: "A Revolução Francesa foi motivada por:",
-            alternativaA: "Apoio ao absolutismo",
-            alternativaB: "Interesses coloniais",
-            alternativaC: "Expansão do feudalismo",
-            alternativaD: "Ideais de liberdade, igualdade e fraternidade",
-            alternativaCorreta: "alternativaD"
-        },
+    {
+        pergunta: "A Revolução Francesa foi motivada por:",
+        alternativaA: "Apoio ao absolutismo",
+        alternativaB: "Interesses coloniais",
+        alternativaC: "Expansão do feudalismo",
+        alternativaD: "Ideais de liberdade, igualdade e fraternidade",
+        alternativaCorreta: "alternativaD"
+    },
 
-        {
-            pergunta: "A Revolução Industrial teve início na:",
-            alternativaA: "Inglaterra",
-            alternativaB: "França",
-            alternativaC: "Alemanha",
-            alternativaD: "Itália",
-            alternativaCorreta: "alternativaA"
-        },
+    {
+        pergunta: "A Revolução Industrial teve início na:",
+        alternativaA: "Inglaterra",
+        alternativaB: "França",
+        alternativaC: "Alemanha",
+        alternativaD: "Itália",
+        alternativaCorreta: "alternativaA"
+    },
 
-        {
-            pergunta: "A Primeira Guerra Mundial terminou com:",
-            alternativaA: "A Revolução Francesa",
-            alternativaB: "A queda do Império Romano",
-            alternativaC: "O Tratado de Versalhes",
-            alternativaD: "A queda do Muro de Berlim",
-            alternativaCorreta: "alternativaC"
-        },
+    {
+        pergunta: "A Primeira Guerra Mundial terminou com:",
+        alternativaA: "A Revolução Francesa",
+        alternativaB: "A queda do Império Romano",
+        alternativaC: "O Tratado de Versalhes",
+        alternativaD: "A queda do Muro de Berlim",
+        alternativaCorreta: "alternativaC"
+    },
 
-        {
-            pergunta: "A Guerra Fria foi marcada por:",
-            alternativaA: "Combates diretos entre EUA e URSS",
-            alternativaB: "Paz mundial e cooperação",
-            alternativaC: "Fim das alianças militares",
-            alternativaD: "Disputas ideológicas e corrida armamentista",
-            alternativaCorreta: "alternativaD"
-        },
+    {
+        pergunta: "A Guerra Fria foi marcada por:",
+        alternativaA: "Combates diretos entre EUA e URSS",
+        alternativaB: "Paz mundial e cooperação",
+        alternativaC: "Fim das alianças militares",
+        alternativaD: "Disputas ideológicas e corrida armamentista",
+        alternativaCorreta: "alternativaD"
+    },
 
-        {
-            pergunta: "A globalização é caracterizada por:",
-            alternativaA: "Interconexão entre países e mercados",
-            alternativaB: "Isolamento econômico dos países",
-            alternativaC: "Desconexão cultural e tecnológica",
-            alternativaD: "Volta ao feudalismo",
-            alternativaCorreta: "alternativaA"
-        }
+    {
+        pergunta: "A globalização é caracterizada por:",
+        alternativaA: "Interconexão entre países e mercados",
+        alternativaB: "Isolamento econômico dos países",
+        alternativaC: "Desconexão cultural e tecnológica",
+        alternativaD: "Volta ao feudalismo",
+        alternativaCorreta: "alternativaA"
+    }
         
-    ]
+]
 
-    // variáveis globais    
+// variáveis globais:
+
     let numeroDaQuestaoAtual = 0
     let pontuacaoFinal = 0
     let tentativaIncorreta = 0
     let certas = 0
     let erradas = 0
     let quantidadeDeQuestoes = listaDeQuestoes.length
-    // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
+
 
     function onloadEsconder() {
         document.getElementById('pontuacao').style.display = "none"
         document.getElementById('jogo').style.display = "none"
     }
+
 
     function iniciarQuiz() {
         document.getElementById('pontuacao').style.display = "flex"
@@ -210,7 +209,6 @@ const listaDeQuestoes = [                                                       
 
         btnSubmeter.disabled = false
         btnProx.disabled = true
-        // btnConcluir.disabled = true
         btnTentarNovamente.disabled = true
     }
 
@@ -220,7 +218,7 @@ const listaDeQuestoes = [                                                       
         numeroDaQuestaoAtual = index
         console.log("questaoAtual")
         console.log(questaoAtual)
-        document.getElementById("spanNumeroDaQuestaoAtual").innerHTML = Number(index) + 1 // ajustando porque o index começa em 0
+        document.getElementById("spanNumeroDaQuestaoAtual").innerHTML = Number(index) + 1
         document.getElementById("spanQuestaoExibida").innerHTML = questaoAtual.pergunta;
         document.getElementById("labelOpcaoUm").innerHTML = questaoAtual.alternativaA;
         document.getElementById("labelOpcaoDois").innerHTML = questaoAtual.alternativaB;

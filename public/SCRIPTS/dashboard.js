@@ -1,6 +1,7 @@
 function carregarDados() {
     carregarKPIS();
     carregarGraficos();
+    kpiQtdTentativas();
 }
 
 function carregarKPIS() {
@@ -98,14 +99,6 @@ function carregarGraficos() {
                         }
 
             });
-            let numero = 0;
-
-            for(let i = 0; i < lista.length; i++) {
-                numero += parseInt(lista[i])
-            }
-
-            let kpi = document.getElementById("kpi4");
-            kpi.innerHTML = numero
         })
     })
 
@@ -125,9 +118,6 @@ function carregarGraficos() {
             for(let i = 1; i <= 20; i++) {
                 let acerto = `acertoQ${i}`;
                 let erro = `erroQ${i}`;
-
-                console.log(lista[acerto])
-                console.log(lista[erro])
 
                 listaAcertos.push(lista[acerto])
                 listaErros.push(lista[erro])
@@ -185,3 +175,15 @@ function carregarGraficos() {
             })
     })
 }
+
+
+function kpiQtdTentativas() {
+    fetch("/dashboard/kpiQtdTentativas").then((res) => {
+            res.json().then((res) => {
+                let kpi = document.getElementById("kpi4");
+                kpi.innerHTML = res[0].qtd;
+            })
+    })
+}
+
+
