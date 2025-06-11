@@ -245,3 +245,36 @@ body {
     width: 9%;
     height: 4%;
 }
+
+#btnSubmeter {
+    width: 8vw;
+    padding: 1vh;
+    font-size: 1rem;
+    background-color: rgba(249, 224, 204, 0.95);
+}
+
+#btnSubmeter:hover {
+    cursor: pointer;
+    background-color: rgba(158, 127, 101, 0.95);
+    color: #FFFFFF
+}
+
+#btnProx {
+    width: 8vw;
+    padding: 1vh;
+    font-size: 1rem;
+    background-color: rgba(249, 224, 204, 0.95);
+}
+
+#btnProx:hover {
+    cursor: pointer;
+    background-color: rgba(158, 127, 101, 0.95);
+    color: #FFFFFF
+}
+
+#botoes {
+    display: flex;
+    height: 8vh;
+    flex-direction: column;
+    justify-content: space-between;
+}

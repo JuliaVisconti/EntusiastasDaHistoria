@@ -153,6 +153,7 @@ body {
 .caixa button:hover {
     color:#f9e0cc;
     font-size: 1.5rem;
+    cursor: pointer;
 
 }
 
@@ -231,4 +232,15 @@ body {
     padding: 2%;
     width: 9%;
     height: 4%;
+}
+
+#select_periodo {
+    width: 15rem;
+    height: fit-content;
+    font-size: 1.2rem;
+    padding: 2%;
+}
+
+#select_periodo:hover {
+    cursor: pointer;
 }
